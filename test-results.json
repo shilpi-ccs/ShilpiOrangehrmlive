@@ -1,0 +1,530 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\playwright.config.ts",
+    "rootDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Shilpi Kumari/Desktop/wwwwwwwwwwww/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.54.2",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "login.spec.ts",
+      "file": "login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "successful login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30645,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts",
+                        "column": 19,
+                        "line": 28
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\LoginPage.ts:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m       \u001b[90m// Wait for a successful response or error response\u001b[39m\n \u001b[90m 27 |\u001b[39m       \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(resp \u001b[33m=>\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m           resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'/dashboard'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\n \u001b[90m 30 |\u001b[39m         )\u001b[33m,\u001b[39m\n \u001b[90m 31 |\u001b[39m         submitButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.login (C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts:28:19)\u001b[22m\n\u001b[2m    at C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\tests\\login.spec.ts:8:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Login error: page.waitForResponse: Test timeout of 30000ms exceeded.\n    at LoginPage.login \u001b[90m(C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mpages\\LoginPage.ts:28:19\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mtests\\login.spec.ts:8:3 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@13'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts'\u001b[39m,\n      line: \u001b[33m28\u001b[39m,\n      column: \u001b[33m19\u001b[39m,\n      function: \u001b[32m'LoginPage.login'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Wait for event \"response\"'\u001b[39m,\n    apiName: \u001b[32m'page.waitForResponse'\u001b[39m,\n    params: { info: \u001b[36m[Object]\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@13'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754500368449\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'    at LoginPage.login (C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts:28:19)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\tests\\\\login.spec.ts:8:3'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-08-06T17:12:17.372Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-4d56fe507e386c963ef7",
+          "file": "login.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "login failure with wrong credentials",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30723,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts",
+                        "column": 19,
+                        "line": 28
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\LoginPage.ts:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m       \u001b[90m// Wait for a successful response or error response\u001b[39m\n \u001b[90m 27 |\u001b[39m       \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(resp \u001b[33m=>\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m           resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'/dashboard'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\n \u001b[90m 30 |\u001b[39m         )\u001b[33m,\u001b[39m\n \u001b[90m 31 |\u001b[39m         submitButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.login (C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts:28:19)\u001b[22m\n\u001b[2m    at C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\tests\\login.spec.ts:16:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Login error: page.waitForResponse: Test timeout of 30000ms exceeded.\n    at LoginPage.login \u001b[90m(C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mpages\\LoginPage.ts:28:19\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mtests\\login.spec.ts:16:3 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@13'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts'\u001b[39m,\n      line: \u001b[33m28\u001b[39m,\n      column: \u001b[33m19\u001b[39m,\n      function: \u001b[32m'LoginPage.login'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Wait for event \"response\"'\u001b[39m,\n    apiName: \u001b[32m'page.waitForResponse'\u001b[39m,\n    params: { info: \u001b[36m[Object]\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@13'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754500368453\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'    at LoginPage.login (C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts:28:19)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\tests\\\\login.spec.ts:16:3'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-08-06T17:12:17.322Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-f72b8b0fd86d87cc424d",
+          "file": "login.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "successful login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30697,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts",
+                        "column": 19,
+                        "line": 28
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\LoginPage.ts:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m       \u001b[90m// Wait for a successful response or error response\u001b[39m\n \u001b[90m 27 |\u001b[39m       \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(resp \u001b[33m=>\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m           resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'/dashboard'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\n \u001b[90m 30 |\u001b[39m         )\u001b[33m,\u001b[39m\n \u001b[90m 31 |\u001b[39m         submitButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.login (C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts:28:19)\u001b[22m\n\u001b[2m    at C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\tests\\login.spec.ts:8:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Login error: page.waitForResponse: Test timeout of 30000ms exceeded.\n    at LoginPage.login \u001b[90m(C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mpages\\LoginPage.ts:28:19\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mtests\\login.spec.ts:8:3 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@13'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts'\u001b[39m,\n      line: \u001b[33m28\u001b[39m,\n      column: \u001b[33m19\u001b[39m,\n      function: \u001b[32m'LoginPage.login'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Wait for event \"response\"'\u001b[39m,\n    apiName: \u001b[32m'page.waitForResponse'\u001b[39m,\n    params: { info: \u001b[36m[Object]\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@13'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754500402780\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'    at LoginPage.login (C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts:28:19)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\tests\\\\login.spec.ts:8:3'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-08-06T17:12:50.971Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-firefox\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-firefox\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-961710d79f2a79bab622",
+          "file": "login.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "login failure with wrong credentials",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30891,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts",
+                        "column": 19,
+                        "line": 28
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\LoginPage.ts:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m       \u001b[90m// Wait for a successful response or error response\u001b[39m\n \u001b[90m 27 |\u001b[39m       \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(resp \u001b[33m=>\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m           resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'/dashboard'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\n \u001b[90m 30 |\u001b[39m         )\u001b[33m,\u001b[39m\n \u001b[90m 31 |\u001b[39m         submitButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.login (C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts:28:19)\u001b[22m\n\u001b[2m    at C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\tests\\login.spec.ts:16:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Login error: page.waitForResponse: Test timeout of 30000ms exceeded.\n    at LoginPage.login \u001b[90m(C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mpages\\LoginPage.ts:28:19\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mtests\\login.spec.ts:16:3 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@13'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts'\u001b[39m,\n      line: \u001b[33m28\u001b[39m,\n      column: \u001b[33m19\u001b[39m,\n      function: \u001b[32m'LoginPage.login'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Wait for event \"response\"'\u001b[39m,\n    apiName: \u001b[32m'page.waitForResponse'\u001b[39m,\n    params: { info: \u001b[36m[Object]\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@13'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754500404501\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'    at LoginPage.login (C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts:28:19)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\tests\\\\login.spec.ts:16:3'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-08-06T17:12:51.298Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-firefox\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-firefox\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-44ec6a1446d2680d82c7",
+          "file": "login.spec.ts",
+          "line": 13,
+          "column": 5
+        },
+        {
+          "title": "successful login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30780,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts",
+                        "column": 19,
+                        "line": 28
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\LoginPage.ts:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m       \u001b[90m// Wait for a successful response or error response\u001b[39m\n \u001b[90m 27 |\u001b[39m       \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(resp \u001b[33m=>\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m           resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'/dashboard'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\n \u001b[90m 30 |\u001b[39m         )\u001b[33m,\u001b[39m\n \u001b[90m 31 |\u001b[39m         submitButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.login (C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts:28:19)\u001b[22m\n\u001b[2m    at C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\tests\\login.spec.ts:8:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Login error: page.waitForResponse: Test timeout of 30000ms exceeded.\n    at LoginPage.login \u001b[90m(C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mpages\\LoginPage.ts:28:19\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mtests\\login.spec.ts:8:3 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@13'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts'\u001b[39m,\n      line: \u001b[33m28\u001b[39m,\n      column: \u001b[33m19\u001b[39m,\n      function: \u001b[32m'LoginPage.login'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Wait for event \"response\"'\u001b[39m,\n    apiName: \u001b[32m'page.waitForResponse'\u001b[39m,\n    params: { info: \u001b[36m[Object]\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@13'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754500438241\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'    at LoginPage.login (C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts:28:19)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\tests\\\\login.spec.ts:8:3'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-08-06T17:13:27.261Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-webkit\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-webkit\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-successful-login-webkit\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-7b41268452baff8d6325",
+          "file": "login.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "login failure with wrong credentials",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30811,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts",
+                        "column": 19,
+                        "line": 28
+                      },
+                      "message": "Error: page.waitForResponse: Test timeout of 30000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\pages\\LoginPage.ts:28\n\n\u001b[0m \u001b[90m 26 |\u001b[39m       \u001b[90m// Wait for a successful response or error response\u001b[39m\n \u001b[90m 27 |\u001b[39m       \u001b[36mconst\u001b[39m [response] \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForResponse(resp \u001b[33m=>\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m           resp\u001b[33m.\u001b[39murl()\u001b[33m.\u001b[39mincludes(\u001b[32m'/dashboard'\u001b[39m) \u001b[33m&&\u001b[39m resp\u001b[33m.\u001b[39mstatus() \u001b[33m===\u001b[39m \u001b[35m200\u001b[39m\n \u001b[90m 30 |\u001b[39m         )\u001b[33m,\u001b[39m\n \u001b[90m 31 |\u001b[39m         submitButton\u001b[33m.\u001b[39mclick()\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at LoginPage.login (C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\pages\\LoginPage.ts:28:19)\u001b[22m\n\u001b[2m    at C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\tests\\login.spec.ts:16:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [
+                    {
+                      "text": "Login error: page.waitForResponse: Test timeout of 30000ms exceeded.\n    at LoginPage.login \u001b[90m(C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mpages\\LoginPage.ts:28:19\u001b[90m)\u001b[39m\n    at \u001b[90mC:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\\u001b[39mtests\\login.spec.ts:16:3 {\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'pw:api@13'\u001b[39m,\n    location: {\n      file: \u001b[32m'C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts'\u001b[39m,\n      line: \u001b[33m28\u001b[39m,\n      column: \u001b[33m19\u001b[39m,\n      function: \u001b[32m'LoginPage.login'\u001b[39m\n    },\n    category: \u001b[32m'pw:api'\u001b[39m,\n    title: \u001b[32m'Wait for event \"response\"'\u001b[39m,\n    apiName: \u001b[32m'page.waitForResponse'\u001b[39m,\n    params: { info: \u001b[36m[Object]\u001b[39m },\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    steps: [],\n    attachmentIndices: [],\n    info: TestStepInfoImpl {\n      annotations: [],\n      _testInfo: \u001b[36m[TestInfoImpl]\u001b[39m,\n      _stepId: \u001b[32m'pw:api@13'\u001b[39m,\n      skip: \u001b[36m[Function (anonymous)]\u001b[39m\n    },\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1754500439799\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.'\u001b[39m,\n      stack: \u001b[32m'Error: page.waitForResponse: Test timeout of 30000ms exceeded.\\n'\u001b[39m +\n        \u001b[32m'    at LoginPage.login (C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\pages\\\\LoginPage.ts:28:19)\\n'\u001b[39m +\n        \u001b[32m'    at C:\\\\Users\\\\Shilpi Kumari\\\\Desktop\\\\wwwwwwwwwwww\\\\tests\\\\login.spec.ts:16:3'\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m\n    }\n  }\n}\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2025-08-06T17:13:28.805Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-webkit\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-webkit\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Shilpi Kumari\\Desktop\\wwwwwwwwwwww\\test-results\\login-login-failure-with-wrong-credentials-webkit\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41d3fd2474a19feb00a1-c13d173102dc895bff3b",
+          "file": "login.spec.ts",
+          "line": 13,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-06T17:12:15.645Z",
+    "duration": 104740.413,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}
