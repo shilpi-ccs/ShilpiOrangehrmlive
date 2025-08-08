@@ -1,7 +1,8 @@
-import { Page } from '@playwright/test';
+import { Page } from "@playwright/test";
 
-export async function selectDropdown(page: Page, labelText: string, optionText: string) {
-  const dropdownArrow = page.locator(`//label[contains(.,'${labelText}')]/following::i[1]`);
-  await dropdownArrow.click();
-  await page.locator(`//div[@role='listbox']//div[text()='${optionText}']`).click();
+export async function takeScreenshot(page, name: string) {
+  await page.screenshot({ path: `screenshots/${name}.png` });
+}
+export function selectDropdown(page: Page, selector: string, value: string) {
+  return page.selectOption(selector, { label: value });
 }

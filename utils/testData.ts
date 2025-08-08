@@ -1,13 +1,11 @@
 export const validUser = {
-  username: process.env.USERNAME || 'Admin',
-  password: process.env.PASSWORD || 'admin123',
+  username: 'Admin',
+  password: 'admin123',
 };
 
 export const newUser = {
-  userRole: 'ESS',            // or 'Admin'
-  status: 'Enabled',
-  employeeName: 'Linda Anderson', // choose a pre-existing employee
-  username: `user${Date.now()}`,
-  password: 'Password@123',
-  confirmPassword: 'Password@123'
+  firstName: 'John',
+  lastName: 'Doe',
+  username: 'john123',
+  password: 'Pass@123',
 };

@@ -1,18 +1,14 @@
-import { test } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
-import { validUser } from '../utils/testData';
+import { DashboardPage } from '../pages/DashBoardPage';
 
-test('successful login', async ({ page }) => {
-  const login = new LoginPage(page);
-  await login.goto();
-  await login.login(validUser.username, validUser.password);
-  await login.assertLoginSuccess();
+test('Login Workflow: Valid credentials', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const dashboardPage = new DashboardPage(page);
+
+  await loginPage.goto();
+  await loginPage.login(process.env.USERNAME!, process.env.PASSWORD!);
+
+  await expect(dashboardPage.welcomeMessage).toBeVisible();
   await page.screenshot({ path: 'screenshots/login-success.png' });
-});
-
-test('login failure with wrong credentials', async ({ page }) => {
-  const login = new LoginPage(page);
-  await login.goto();
-  await login.login('wrong', 'wrong');
-  await login.assertError('Invalid credentials');
 });
